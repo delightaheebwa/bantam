@@ -45,7 +45,9 @@ public class bantam {
     }
 
     private static void run(String source) {
+        // so that we can be able to run scanTokens() since it depends on isAtEnd()
         Scanner scanner = new Scanner(source);
+        // scanTokens() returns private final List<Token> tokens
         List<Token> tokens = scanner.scanTokens();
 
         for (Token token : tokens) {
